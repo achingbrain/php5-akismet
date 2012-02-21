@@ -1,22 +1,28 @@
-= Introduction
+# Introduction
 
 This is a simple little PHP5 class that enables you use the Akismet anti-spam service in your PHP5 application.
 
-= Download
+# Download
 
 Check out the git repository:
 
 	git clone git@github.com:achingbrain/php5-akismet.git
 
-= Installation
+# Installation
 
 Once you have cloned the repo (see Download, above) copy the file at src/main/php/net/achingbrain/Akismet.class.php to somewhere accessible to your scripts. Use include or a derivative to import it into your script.
 
-= Documentation
+Alternatively if you are running a version of PHP greater than 5.3, grab the [phar file](http://achingbrain.github.com/maven-repo/releases/net/achingbrain/php5-akismet/0.5/php5-akismet-0.5.phar) and use the following code:
+
+	<?php
+		include 'phar:///path/to/php5-akismet-0.5.phar/net/achingbrain/Akismet.class.php';
+	?>
+
+# Documentation
 
 See the [PHPDocs](http://achingbrain.github.com/maven-repo/documentation/php5-akismet/apidocs).
 
-= Usage
+# Usage
 
 Before you can use Akismet, you need a WordPress API key (they are free and getting one takes about five minutes). Once you have one, take a look at the code below:
 
@@ -45,16 +51,16 @@ and
 
 to submit mis-diagnosed spam and ham, which improves the system for everybody. See the included documentation for a complete run-down of all available methods.
 
-== Changelog
+## Changelog
 
-=== Version 0.5
+### Version 0.5
 
 * Deployed to GitHub instead of achingbrain.net for better collaboration in future
 * Converted project to use Maven for unit testing and documentation generation
 * Unit tests & documentaiton
 * Allowed overriding of user agent when submitting ham/spam (thanks Steven)
 
-=== Version 0.4
+### Version 0.4
 
 * Performance – changed HTTP version from 1.1 to 1.0 (with thanks to Jan De Poorter).
 * Performance – No longer issues a separate HTTP request to check validity of the API key with every instantiation.
@@ -62,13 +68,14 @@ to submit mis-diagnosed spam and ham, which improves the system for everybody. S
 * The method 'isCommentSpam' (rather than the constructor) will now throw an exception if the API key is invalid.
 * Tidied up internal structure a bit.
 
-=== Version 0.3
+### Version 0.3
 
 Internal testing version
 
-=== Version 0.2
+### Version 0.2
 
 Initial release
 
-=== Version 0.1
+### Version 0.1
+
 Internal testing version
