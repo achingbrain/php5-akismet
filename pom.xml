@@ -52,36 +52,17 @@
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>release-repo.php-maven.org</id>
-			<name>PHP-Maven 1 Release Repository</name>
-			<url>http://repo1.php-maven.org/release</url>
+			<id>release-repos.php-maven.org</id>
+			<name>PHP-Maven Release Repository</name>
+			<url>http://repos.php-maven.org/releases</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
 		</pluginRepository>
 		<pluginRepository>
-			<id>snapshot-repo.php-maven.org</id>
-			<name>PHP-Maven 1 Snapshot Repository</name>
-			<url>http://repo1.php-maven.org/snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>release-repos.xworlds.org</id>
-			<name>PHP-Maven 2 Release Repository</name>
-			<url>http://repos.xworlds.org/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</pluginRepository>
-		<pluginRepository>
-			<id>snapshot-repos.xworld.org</id>
-			<name>PHP-Maven 2 Snapshot Repository</name>
-			<url>http://repos.xworlds.org/snapshots</url>
+			<id>snapshot-repos.php-maven.org</id>
+			<name>PHP-Maven Snapshot Repository</name>
+			<url>http://repos.php-maven.org/snapshots</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -92,36 +73,17 @@
 	</pluginRepositories>
 	<repositories>
 		<repository>
-			<id>release-repo1.php-maven.org</id>
-			<name>PHP-Maven 1 Release Repository</name>
-			<url>http://repo1.php-maven.org/release</url>
+			<id>release-repos.php-maven.org</id>
+			<name>PHP-Maven Release Repository</name>
+			<url>http://repos.php-maven.org/releases</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
 		</repository>
 		<repository>
-			<id>snapshot-repo1.php-maven.org</id>
-			<name>PHP-Maven 1 Snapshot Repository</name>
-			<url>http://repo1.php-maven.org/snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>release-repos.xworlds.org</id>
-			<name>PHP-Maven 2 Release Repository</name>
-			<url>http://repos.xworlds.org/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>snapshot-repos.worlds.org</id>
-			<name>PHP-Maven 2 Snapshot Repository</name>
-			<url>http://repos.xworlds.org/snapshots</url>
+			<id>snapshot-repos.php-maven.org</id>
+			<name>PHP-Maven Snapshot Repository</name>
+			<url>http://repos.php-maven.org/snapshots</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -195,9 +157,10 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.phpunit</groupId>
-			<artifactId>phpunit5</artifactId>
+			<groupId>de.phpunit</groupId>
+			<artifactId>PHPUnit</artifactId>
 			<version>${phpunit.version}</version>
+			<type>phar</type>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -209,6 +172,6 @@
 		<maven.site.plugin.version>3.0</maven.site.plugin.version>
 		<maven.php.plugin.version>2.0-SNAPSHOT</maven.php.plugin.version>
 
-		<phpunit.version>3.3.9</phpunit.version>
+		<phpunit.version>3.4.15</phpunit.version>
 	</properties>
 </project>
